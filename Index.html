@@ -1,27 +1,133 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Bootstrap - Prebuilt Layout</title>
-<h1> cool </h1>
-<!-- Bootstrap -->
-<link href="css/bootstrap.css" rel="stylesheet">
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <style>
 
-<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-<!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
+    /* Remove the navbar's default margin-bottom and rounded borders */ 
+    .navbar {
+      margin-bottom: 0;
+      border-radius: 0;
+    }
+    
+    /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
+    .row.content {height: 750px}
+    
+    /* Set gray background color and 100% height */
+    .sidenav {
+      padding-top: 20px;
+      background-color: #f7cd7f;
+      height: 100%;
+    }
+    
+    /* Set blue background color, white text and some padding */
+    footer {
+      background-color: rgb(29, 136, 223);
+      color: white;
+      padding: 15px;
+    }
+    
+    /* On small screens, set height to 'auto' for sidenav and grid */
+    @media screen and (max-width: 767px) {
+      .sidenav {
+        height: auto;
+        padding: 15px;
+      }
+      .row.content {height:auto;} 
+    }
+    
+    /* Set link colors */
+    a:link {
+      color: white;
+    }
+
+    a:visited {
+      color: orange;
+    }
+
+    a:hover {
+      color: darkorange;
+    }
+
+    /* override default navbar color */
+    #navbar-override {
+      background-color: rgb(29, 136, 223);
+    }
+
+    /* override active color */
+    #active-override {
+      background-color: #f7cd7f;
+    }
+
+    .top-padding {
+      padding-top: 20px;
+    }
+
+  </style>
 </head>
 <body>
-<h1>This is my title</h1>
-<!-- jQuery (necessary for Bootstrap's JavaScript plugins) --> 
-<script src="js/jquery-1.11.3.min.js"></script>
 
-<!-- Include all compiled plugins (below), or include individual files as needed --> 
-<script src="js/bootstrap.js"></script>
+<nav class="navbar navbar-inverse" id="navbar-override">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="#">Nick</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul  class="nav navbar-nav">
+        <li class="active" id="active-override"><a href="#">Home</a></li>
+        <li><a href="proj1.html">Project 1</a></li>
+        <li><a href="proj2.html">Project 2</a></li>
+        <li><a href="proj3.html">Project 3</a></li>
+        <li><a href="proj4.html">Project 4</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+  
+<div class="container-fluid text-center">    
+  <div class="row content">
+      <div class="col-sm-2 sidenav">
+      
+        </div>
+   
+    <div class="col-sm-8 text-left"> 
+      <h1>Welcome to my site</h1><hr>
+      <h3>My name is Nick</h3>
+      <img class="img-responsive img-circle profile-pics" src="media/Nick.jpg" alt="image of Nick">
+      <p class="top-padding">Hi, my name is Nick and I am from Tacoma, Washington. Currently enrolled in the GIMM program at Boise State University. I am always working to improve my skillset whether it be in the classroom or in my free time. When I'm not studying you can usually find me playing games or doing some form of outdoor activity such as skiing or hiking.</p>
+      <hr>
+      <h3>Skills</h3>
+      <ul class="font">
+        <li> UX Design</li>
+        <li> WordPress</li>
+        <li>
+            Coding Languages:
+            <ul>
+                <li>C#</li>
+                <li>Jquery</li>
+                <li>ActionScript</li>
+                <li>Bootstrap</li>
+                <li>CSS</li>
+                <li>HTML</li>
+            </ul>
+
+    </div>
+  </div>
+</div>
+
+<footer class="container-fluid text-center">
+  <p>Email: <a href="mailto:nickbrady253@gmail.com?Subject=Hello%20again" target="_top">nickbrady253@gmail.com</a></p>
+</footer>
+
 </body>
 </html>
